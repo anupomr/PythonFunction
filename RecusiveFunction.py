@@ -26,3 +26,29 @@ def multiplication(multiplier, multiplicand):
 
 
 print(multiplication(5, 4))
+
+
+# Recursive product
+def power(num, k):
+    if k == 1:
+        return num
+    else:
+        return num * power(num, k - 1)
+
+
+print(power(5, 5))
+
+
+# Recursive Fibonacci sequence
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+# Test Fibonacci sequence
+for j in range(4):
+    print(fibonacci(j), ", ", end=' ', flush=True),
