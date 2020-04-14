@@ -1,4 +1,16 @@
-print("Python Error Handling ")
+name = input("Your name : ")
+color = input("Favourite  color : ")
+print(name, "Likes", color)
+print('*' * 10)
+
+# Type conversion
+birth_year = input("Birth Year : ")
+print(type(birth_year))
+age = 2020 - int(birth_year)  # Conversion
+print(type(age))
+print(age)
+
+print("Python Error Handling ".upper())
 age = -1
 while age <= 0:
     try:
@@ -11,8 +23,8 @@ while age <= 0:
 print('Welcome to the GPA calculator.')
 print('Please enter all your letter grades, one per line.')
 print('Enter a blank line to designate the end.')
-points = {'A+':4.0, 'A':4.0, 'A-':3.67, 'B+':3.33, 'B':3.0, 'B-':2.67,
-          'C+':2.33, 'C':2.0, 'C':1.67, 'D+':1.33, 'D':1.0, 'F':0.0}
+points = {'A+': 4.0, 'A': 4.0, 'A-': 3.67, 'B+': 3.33, 'B': 3.0, 'B-': 2.67,
+          'C+': 2.33, 'C': 2.0, 'C': 1.67, 'D+': 1.33, 'D': 1.0, 'F': 0.0}
 num_courses = 0
 total_points = 0
 done = False
@@ -27,5 +39,3 @@ while not done:
         total_points += points[grade]
 if num_courses > 0:
     print('Your GPA is {0:.3}'.format(total_points / num_courses))
-
-
