@@ -10,6 +10,16 @@ age = 2020 - int(birth_year)  # Conversion
 print(type(age))
 print(age)
 
+# Mortgage Calculation
+house_price = 1000000
+is_good_credit = True
+down_payment = 0
+if is_good_credit:
+    down_payment = house_price * .1
+else:
+    down_payment = house_price * .2
+print(f"Down payment: ${down_payment}")
+
 print("Python Error Handling ".upper())
 age = -1
 while age <= 0:
