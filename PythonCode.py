@@ -1,4 +1,10 @@
 name = input("Your name : ")
+while len(name) < 3:
+    print("Name must at least 3 char")
+    name = input("Your name : ")
+while len(name) > 50:
+    print("Name must less 50 char")
+    name = input("Your name : ")
 color = input("Favourite  color : ")
 print(name, "Likes", color)
 print('*' * 10)
@@ -13,8 +19,10 @@ print(age)
 # Mortgage Calculation
 house_price = 1000000
 is_good_credit = True
+has_high_income = False
+has_criminal_record = False
 down_payment = 0
-if is_good_credit:
+if is_good_credit or has_high_income and not has_criminal_record:
     down_payment = house_price * .1
 else:
     down_payment = house_price * .2
