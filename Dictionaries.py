@@ -23,13 +23,17 @@ for ch in phone:
 print(output)
 
 # Emoji mapping
-message = input("> ")
-words = message.split(' ')
-emojis = {
-    ":)": "😊", # fro Emoji Win key + ; together
-    ":(": "😒"
-}
-output = ""
-for word in words:
-    output += emojis.get(word, word) + " "
-print(output)
+
+
+def emoji_converter(message):
+    words = message.split(' ')
+    emojis = {
+        ":)": "😊", # fro Emoji Win key + ; together
+        ":(": "😒"
+    }
+    output = ""
+    for word in words:
+        output += emojis.get(word, word) + " "
+    return output
+
+print(emoji_converter(input(">")))

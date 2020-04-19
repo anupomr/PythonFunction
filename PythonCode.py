@@ -33,8 +33,10 @@ age = -1
 while age <= 0:
     try:
         age = int(input('enter your age in years: '))
-        if age <= 0:
+        if age < 0:
             print('your age must be positive')
+    except ZeroDivisionError:
+        print("Age cannot be Zero :")
     except(ValueError, EOFError):
         print('invalid response')
 
